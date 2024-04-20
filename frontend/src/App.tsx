@@ -7,9 +7,7 @@ import Home from "../pages/home";
 import AboutUs from '../pages/about';
 import Contact from '../pages/contact';
 import { IconHome, IconPhone, IconUsers } from "@tabler/icons-react";
-import {cn} from "./utils/cn"
 import { BackgroundBeams } from "../pages/background";
-import { JSX } from 'react/jsx-runtime';
 
 function App() {
   const navItems = [
