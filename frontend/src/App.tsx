@@ -8,7 +8,7 @@ import AboutUs from '../pages/about';
 import Contact from '../pages/contact';
 import { IconHome, IconPhone, IconUsers } from "@tabler/icons-react";
 import { BackgroundBeams } from "../pages/background";
-
+  import {GridBackgroundDemo} from "../components/Hero";
 function App() {
   const navItems = [
     {
@@ -31,6 +31,7 @@ function App() {
   return (
     <>
     <BackgroundBeams />
+    <GridBackgroundDemo />
       <Router>
       <div className="relative  w-full">
         <FloatingNav navItems={navItems}/>
