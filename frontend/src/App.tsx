@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+"use client";
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FloatingNav } from "../components/navbar"
+import { Footer } from '../components/footer'
+import Home from "../pages/home";
+import AboutUs from '../pages/about';
+import Contact from '../pages/contact';
+import { IconHome, IconPhone, IconUsers } from "@tabler/icons-react";
+import {cn} from "./utils/cn"
+import { BackgroundBeams } from "../pages/background";
+import { JSX } from 'react/jsx-runtime';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+      icon: <IconPhone className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "About",
+      link: "/about",
+      icon: <IconUsers className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BackgroundBeams />
+      <Router>
+      <div className="relative  w-full">
+        <FloatingNav navItems={navItems}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+        <Footer/>
+      </Router>
     </>
   )
 }
-
 export default App
