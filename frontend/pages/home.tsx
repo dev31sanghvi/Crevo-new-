@@ -1,9 +1,9 @@
+import {GridBackgroundDemo} from "../components/Hero";
+
 const Home = ()=>{
     return (
-        <>
-            <div className="font-bold">
-                HOME
-            </div>
+        <>    
+        <GridBackgroundDemo />
         </>
     )
 }
