@@ -8,6 +8,7 @@ import AboutUs from '../pages/about';
 import Contact from '../pages/contact';
 import { IconHome, IconPhone, IconUsers } from "@tabler/icons-react";
 import { BackgroundBeams } from "../pages/background";
+
 function App() {
   const navItems = [
     {
@@ -22,7 +23,7 @@ function App() {
     },
     {
       name: "About",
-      link: "/about",
+      link: "#ehe",
       icon: <IconUsers className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
   ];
