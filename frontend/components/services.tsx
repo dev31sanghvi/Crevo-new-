@@ -9,21 +9,21 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Web Development",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
+    "We craft high-performance, user-friendly websites and applications that drive results. From concept to completion, we handle every aspect of the development process to ensure your online presence reflects your brand and exceeds your audience's expectations.",
     link: "https://stripe.com",
   },
   {
-    title: "Netflix",
+    title: "Lead Generation",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+    "We help you attract qualified leads and convert them into loyal customers. Our data-driven strategies and targeted campaigns increase brand awareness, nurture leads, and ultimately boost your ROI. Let us fill your sales pipeline with potential customers ready to do business.",
     link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Content Creation",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
+    "We create engaging and informative content that captures your audience's attention and keeps them coming back for more. Our skilled content creators craft compelling website copy, blog posts, social media content, and more, all designed to achieve your specific goals. Let us tell your brand story in a way that resonates with your target audience.",
     link: "https://google.com",
   },
 
