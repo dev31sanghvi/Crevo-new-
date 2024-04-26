@@ -40,13 +40,13 @@ const Highlight = ({
 
 interface HeroScrollProps {}
 
-export const HeroScrollDemo: React.FC<HeroScrollProps> = () => {
+export const  HeroScrollDemo: React.FC<HeroScrollProps> = () => {
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
         titleComponent={
           <>
-            <div className="text-4xl font-semibold text-black dark:text-white">
+            <div id="about" className="text-4xl font-semibold text-black dark:text-white">
             We unlock your brand&apos;s potential to scale using <br />
               <div className="text-4xl md:text-[4rem] my-5 font-bold leading-none">
               <Highlight className="text-black dark:text-white">

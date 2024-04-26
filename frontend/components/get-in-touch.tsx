@@ -38,7 +38,7 @@ if(section){
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem] typewriter-demo">
+    <div id="contact" className="flex flex-col items-center justify-center h-[40rem] typewriter-demo">
       <p className="text-neutral-600 dark:text-neutral-200 text-lg  mb-10">
         We are just a click Apart !
       </p>
@@ -49,7 +49,7 @@ if(section){
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span
             onClick={() =>
-              (window.location.href = "mailto:sonivaibhav378@gmail.com")
+              (window.location.href = "mailto:work.crevo@gmail.com")
             }
             className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl"
           >

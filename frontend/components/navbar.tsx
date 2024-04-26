@@ -60,7 +60,7 @@ export const FloatingNav = ({
                 <IconCalendarMonth className="h-4 w-4 text-neutral-500 dark:text-white" />
               }
             </span>
-            <span className="hidden sm:block text-xl">Schedule Call</span>
+            <span className="hidden sm:block text-xl">Book Call</span>
           </Link>
         </motion.div>
       </AnimatePresence>
