@@ -34,7 +34,7 @@ function App() {
     <>
     <BackgroundBeams />
       <Router>
-      <div className="relative  w-full">
+      <div className="relative w-full">
         <FloatingNav navItems={navItems}/>
       </div>
         <Routes>
