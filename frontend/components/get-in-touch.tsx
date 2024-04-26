@@ -19,7 +19,7 @@ export function TypewriterEffectDemo() {
   ];
 
   const [isAnimating, setIsAnimating] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>
+  // const observerRef = useRef<IntersectionObserver | null>
   // Detect when the section is in view
   useEffect(() => {
     const section = document.querySelector(".typewriter-demo");
