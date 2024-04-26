@@ -1,4 +1,4 @@
-import { useState,useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { TypewriterEffect } from "../pages/typewriter-effect";
 
 export function TypewriterEffectDemo() {
