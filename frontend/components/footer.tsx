@@ -4,10 +4,10 @@ export const Footer = ()=>{
     return (
         <footer className="footer flex justify-center items-center py-4 text-white">
           <div className="container mx-auto flex flex-wrap justify-between">
-        
+
             <p className="text-xs">© 2024 Copyright: <a href="https://tw-elements.com/" className="text-white hover:underline underline-offset-2">CREVO</a></p>
-    
-          
+
+
             <ul className="flex space-x-4 text-sm">
 
               <li><a href="https://www.twitter.com/" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faTwitter} /></a></li>
