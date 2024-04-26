@@ -18,10 +18,10 @@ export const FloatingNav = ({
 }) => {
   return (
     <>
-      <img
+       <img
         src={logo4}
         alt="Your Company Logo"
-        className="absolute top-0 left-0 h-41 w-96 max-h-24 max-w-24 mr-4"
+        className="fixed mt-1 z-50 h-41 w-96 max-h-24 max-w-24 mr-4"
       />
       <AnimatePresence mode="wait">
         <motion.div
@@ -60,7 +60,7 @@ export const FloatingNav = ({
                 <IconCalendarMonth className="h-4 w-4 text-neutral-500 dark:text-white" />
               }
             </span>
-            <span className="hidden sm:block text-xl">Schedule Call</span>
+            <span className="hidden sm:block text-xl">Book Call</span>
           </Link>
         </motion.div>
       </AnimatePresence>

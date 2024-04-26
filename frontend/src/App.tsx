@@ -19,12 +19,12 @@ function App() {
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "#contact",
       icon: <IconPhone className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "About",
-      link: "#ehe",
+      link: "#about",
       icon: <IconUsers className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     
@@ -34,7 +34,7 @@ function App() {
     <>
     <BackgroundBeams />
       <Router>
-      <div className="relative  w-full">
+      <div className="relative w-full">
         <FloatingNav navItems={navItems}/>
       </div>
         <Routes>
