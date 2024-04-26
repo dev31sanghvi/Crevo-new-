@@ -1,7 +1,5 @@
-"use client";
 import React from "react";
 import { ContainerScroll } from "../pages/scroll-animation"
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { cn } from "../src/utils/cn";
 
@@ -40,7 +38,9 @@ const Highlight = ({
   );
 };
 
-export function HeroScrollDemo() {
+interface HeroScrollProps {}
+
+export const HeroScrollDemo: React.FC<HeroScrollProps> = () => {
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
@@ -57,8 +57,8 @@ export function HeroScrollDemo() {
           </>
         }
       >
-        <Image
-          src={`/linear.webp`}
+        <img
+          src="/src/assets/logo4.png" // Assuming the image is in the src/assets folder
           alt="hero"
           height={720}
           width={1400}
