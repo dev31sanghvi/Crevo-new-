@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState,useRef, useEffect } from "react";
 import { TypewriterEffect } from "../pages/typewriter-effect";
 
 export function TypewriterEffectDemo() {
+
   const words = [
     {
       text: "Let's",
@@ -18,16 +19,20 @@ export function TypewriterEffectDemo() {
   ];
 
   const [isAnimating, setIsAnimating] = useState(false);
-
+  const observerRef = useRef<IntersectionObserver | null>
   // Detect when the section is in view
   useEffect(() => {
+    const section = document.querySelector(".typewriter-demo");
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setIsAnimating(entry.isIntersecting);
     });
 
-    const section = document.querySelector(".typewriter-demo");
-    observer.observe(section);
+if(section){
+  observer.observe(section);
+}else{
+  console.error("element not found ");
+}
 
     return () => observer.disconnect(); // Cleanup on unmount
   }, []);
