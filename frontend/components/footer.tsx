@@ -10,11 +10,11 @@ export const Footer = ()=>{
 
             <ul className="flex space-x-4 text-sm">
 
-              <li><a href="https://www.twitter.com/" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faTwitter} /></a></li>
-              <li><a href="https://www.instagram.com/" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faInstagram} /></a></li>
+              <li><a href="https://twitter.com/Crevo_official" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faTwitter} /></a></li>
+              <li><a href="https://www.instagram.com/crevo_official" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faInstagram} /></a></li>
 
 
-              <li><a href="https://www.linkedin.com/" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+              <li><a href="https://www.linkedin.com/company/crevo-co-in/" className="text-white hover:text-gray-300"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
 
             </ul>
           </div>
