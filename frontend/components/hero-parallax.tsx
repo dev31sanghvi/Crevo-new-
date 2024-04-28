@@ -165,19 +165,19 @@ export const products = [
     title: "AI chatbot",
     link: "#",
     thumbnail:
-      "../public/LLM.png",
+      "/LLM.png",
   },
   {
     title: "Appointment Application ",
     link: "https://doctor-appointment-app-omega.vercel.app/",
     thumbnail:
-      "../public/project1.jpeg",
+      "/project1.jpeg",
   },
   {
     title: "Personal Portfolio",
     link: "https://devsanghvi.vercel.app/",
     thumbnail:
-      "../public/project2.png",
+      "/project2.png",
   },
 
 ];
