@@ -58,7 +58,7 @@ export const  HeroScrollDemo: React.FC<HeroScrollProps> = () => {
         }
       >
         <img
-          src="/src/assets/logo4.png" // Assuming the image is in the src/assets folder
+          src="/home.png" // Assuming the image is in the src/assets folder
           alt="hero"
           height={720}
           width={1400}
