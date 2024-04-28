@@ -162,22 +162,23 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "project 1 ",
-    link: "https://doctor-appointment-app-omega.vercel.app/",
-    thumbnail:
-      "./src/assets/project1.jpeg",
-  },
-  {
-    title: "Cursor",
-    link: "https://devsanghvi.vercel.app/",
-    thumbnail:
-      "./src/assets/project2.png",
-  },
-  {
-    title: "Rogue",
+    title: "AI chatbot",
     link: "#",
     thumbnail:
-      "./src/assets/LLM.png",
+      "../public/LLM.png",
   },
+  {
+    title: "Appointment Application ",
+    link: "https://doctor-appointment-app-omega.vercel.app/",
+    thumbnail:
+      "../public/project1.jpeg",
+  },
+  {
+    title: "Personal Portfolio",
+    link: "https://devsanghvi.vercel.app/",
+    thumbnail:
+      "../public/project2.png",
+  },
+
 ];
 
