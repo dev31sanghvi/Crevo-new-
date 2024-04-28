@@ -39,7 +39,7 @@ export const AnimatedTooltip = ({
 
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <Link
         href={item.link}
         className="-mr-4  relative group"
