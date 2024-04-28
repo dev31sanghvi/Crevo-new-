@@ -162,22 +162,22 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "project 1 ",
+    link: "https://doctor-appointment-app-omega.vercel.app/",
     thumbnail:
-      "./src/assets/logo4.png",
+      "./src/assets/project1.jpeg",
   },
   {
     title: "Cursor",
-    link: "https://cursor.so",
+    link: "https://devsanghvi.vercel.app/",
     thumbnail:
-      "./src/assets/logo4.png",
+      "./src/assets/project2.png",
   },
   {
     title: "Rogue",
-    link: "https://userogue.com",
+    link: "#",
     thumbnail:
-      "./src/assets/logo4.png",
+      "./src/assets/LLM.png",
   },
 ];
 
