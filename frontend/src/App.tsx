@@ -7,6 +7,7 @@ import Home from "../pages/home";
 import AboutUs from '../pages/about';
 import Contact from '../pages/contact';
 import { IconHome, IconPhone, IconUsers } from "@tabler/icons-react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import { BackgroundBeams } from "../pages/background";
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
         </Routes>
         <Footer/>
+        <SpeedInsights/>
       </Router>
     </>
   )
