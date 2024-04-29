@@ -47,6 +47,7 @@ function App() {
         <SpeedInsights/>
         <Analytics/>
       </Router>
+      
     </>
   )
 }
