@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
-// import { TypewriterEffect } from "../pages/typewriter-effect";
-
-// Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
 ("use client");
 import * as React from "react";
 import { cn } from "../src/utils/cn";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
+import { z } from "zod";
+
+const formSchema = z.object({
+  firstName: z.string().trim().min(1, "First name is required"),
+  lastName: z.string().trim().min(1, "Last name is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().trim().min(1, "Message is required"),
+});
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
@@ -90,9 +95,32 @@ const LabelInputContainer = ({
   );
 };
 
+
 function SignupFormDemo() {
+  // using zod for the validation
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget); // getting form data
+    // const formValues = Object.fromEntries(formData.entries()); // formdata object to plain object
+
+    //form value obj.
+    const formValues = {
+      firstName: formData.get('firstName') || '',
+      lastName: formData.get('lastName') || '',
+      email: formData.get('email') || '',
+      message: formData.get('message') || '',
+    };
+
+    try {
+      const parsedData = formSchema.safeParse(formValues); // parsing data according to schema
+      if (parsedData.success) {
+        console.log("Form data is valid:", parsedData.data);
+      } else {
+        console.error("Something is up buddy !:", parsedData.error);
+      }
+    } catch (error) {
+      console.error("Unexpected error:", error);
+    }
     console.log("Form submitted");
   };
   return (
@@ -101,7 +129,7 @@ function SignupFormDemo() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="Tyler" type="string" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
@@ -114,11 +142,7 @@ function SignupFormDemo() {
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password">Message</Label>
-          <Input
-            id="text"
-            placeholder="Let's build this project"
-            type="text"
-          />
+          <Input id="text" placeholder="Your Message" type="text" />
         </LabelInputContainer>
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
